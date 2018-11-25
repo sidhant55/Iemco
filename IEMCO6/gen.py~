@@ -1,0 +1,35 @@
+import random
+f=open("input1.txt","w+")
+
+n=10
+q=10
+f.write(str(n)+" "+str(q)+"\n")
+
+dic={}
+dic[0]='0'
+dic[1]='1'
+dic[2]='2'
+dic[3]='3'
+dic[4]='4'
+dic[5]='5'
+dic[6]='6'
+dic[7]='7'
+dic[8]='8'
+dic[9]='9'
+dic[10]='A'
+dic[11]='B'
+dic[12]='C'
+dic[13]='D'
+dic[14]='E'
+dic[15]='F'
+
+
+for i in range (n):
+	st=""
+	for j in range(100):
+		a=random.randint(0,15)
+		st=st+dic[a]
+	print(st)
+	f.write(str(st)+"\n")
+
+f.close()
